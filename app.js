@@ -35,8 +35,9 @@ const start = async () => {
   }
 };
 
+export {app,start}
 // start();
-export default start
+
 
 
 
