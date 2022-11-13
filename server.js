@@ -1,2 +1,2 @@
-import {start} from './app.js'
+const {start} =require('./app.js')
 start();

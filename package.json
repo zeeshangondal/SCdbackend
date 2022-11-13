@@ -2,8 +2,7 @@
   "name": "backend-bare",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
     "start": "node server.js"

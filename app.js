@@ -1,11 +1,11 @@
-import express from 'express'
+const express =require('express')
 const app = express();
-import employees from './routes/employees.js'
-import connectDB from './db/connect.js'
-import dotenv from 'dotenv'
-import notFound from './middleware/not-found.js'
-import errorHandlerMiddleware from './middleware/error-handler.js'
-import cors from 'cors'
+const employees =require('./routes/employees.js')
+const connectDB =require('./db/connect.js')
+const dotenv =require('dotenv')
+const notFound =require('./middleware/not-found.js')
+const errorHandlerMiddleware =require('./middleware/error-handler.js')
+const cors =require('cors')
 
 //DB name HospitalManagementSystemDB
 const MONGO_URI = "mongodb+srv://zeeshan:asdfg12345@cluster0.q8osuvr.mongodb.net/HospitalManagementSystemDB?retryWrites=true&w=majority"
@@ -35,7 +35,7 @@ const start = async () => {
   }
 };
 
-export {app,start}
+module.exports= {app,start}
 // start();
 
 
@@ -60,17 +60,17 @@ export {app,start}
  * Modify the code according to your own needs and requirements
  */
 
-//const express from('express')
-// import express from 'express'; // <-- Module Style import
-// import bodyParser from 'body-parser';
-// import cors from 'cors'
+//const express =require(('express')
+// const express =require( 'express'; // <-- Module Style const
+// const bodyParser =require( 'body-parser';
+// const cors =require( 'cors'
 
-// // Importing user route
-// import employeesRouter from './routes/employees.js';
+// // consting user route
+// const employeesRouter =require( './routes/employees.js';
 
-// // const router from('router')
+// // const router =require(('router')
 
-// // const bodyParser from('body-parser')
+// // const bodyParser =require(('body-parser')
 
 // const app = express()
 // const port = 3001
