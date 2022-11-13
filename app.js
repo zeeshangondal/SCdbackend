@@ -25,7 +25,7 @@ const port =  process.env.PORT || 3001;
 
 const start = async () => {
   try {
-    await connectDB(MONGO_URI);
+    await connectDB();
     console.log("DB connected")
     app.listen(port, () =>
       console.log(`Server is listening on port ${port}...`)
@@ -35,7 +35,19 @@ const start = async () => {
   }
 };
 
-module.exports= {app,start}
+
+const connectToDB = async () => {
+  try {
+    await connectDB();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports= {app,start,connectToDB}
+
+
+
 // start();
 
 
